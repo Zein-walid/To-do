@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+:root{
+    --background-color: #fafafa;
+    --color: #000;
+}
+/* dark mode */
+
+/* dark mode */
+/* Header */
+.header{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color);
+    position: relative;
+    transition: .5s;
+}
+.header-img{
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-position: center;
+    background-size: cover;
+}
+.header-text{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4%; 
+    width: 40%;
+    color: var(--color);
+}
+.header-text .text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-text .text h1{
+    font-size: 4em;
+    letter-spacing: 10px;
+    color: white;
+    font-weight: 600;
+}
+.header-text .input{
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.header-text .input button{
+    padding: 15px 20px;
+    border-radius: 5px;
+    background-color: white;
+    border: 0;
+    letter-spacing: 1px;
+    margin-left: 20px;
+    color: black;
+}
+.header-text input{
+    width: 90%;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--color);
+}
+/* header */
+
+
+/* task box */
+
+.taskbox{
+    margin-top: 40px;
+    padding: 30px;
+    width:100%;
+    height: 400px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+    overflow-y: scroll;
+}
+.taskbox::-webkit-scrollbar{
+    width: 10px;
+    background-color: gray;
+    
+}
+.taskbox::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 20px;
+    
+}
+.taskbox .task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: black;
+}
+.taskbox .task h1{
+    color: #000;
+    font-size: 30px;
+}
+.taskbox .task button{
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: 1px solid black;
+    text-transform: capitalize;
+}
+.taskbox .done{
+    color: #777;
+}
+/* task box */
+
+/* responsive */
+
+
+@media (max-width: 992px){
+    .header-text .text{
+        width: 100%;
+    }
+    .header-text{
+        width: 80%;
+    }
+    .header-text .text h1{
+        font-size: 30px;
+    }
+    .taskbox .task{
+        font-size: 20px;
+    }
+    .taskbox .task button{
+        padding: 10px 15px;
+    }
+}
